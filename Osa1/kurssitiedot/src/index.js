@@ -35,35 +35,35 @@ const Part = (props) => {
 
 return (
 <div>
-
 {props.parts[props.index].part} {props.parts[props.index].exercises}
-
 </div>
 )
 }
 
 const App = () => {
-
-  const parts = [
+  const course = {
+    name: 'Half Stack application development',
+     parts : [
     {
       part: 'Fundamentals of React',
-      exercises: 10
+      exercises: 10,
      },
     {
       part: 'Using props to pass data',
-      exercises: 7
+      exercises: 7,
     },
     {
       part: 'State of a component',
-      exercises: 14
-    }
-];
+      exercises: 14,
+    },
+  ],
+};
 
   return (
     <div>
-        <Header header='Half Stack application development'/>
-        <Content parts={parts}/>
-        <Total parts={parts}/>
+        <Header header={course.name}/>
+        <Content parts={course.parts}/>
+        <Total parts={course.parts}/>
     </div>
   )
 }
