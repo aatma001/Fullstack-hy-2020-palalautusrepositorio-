@@ -12,12 +12,12 @@ const Statistics = ({values}) => {
   const total = values.reduce((prev,next) => prev + next,0);
   const score = values[0] + (values[2] * -1)
   
+  
+  
   if (total !== 0) {
   return(
     <div>
-      <h1>
-        statistics
-      </h1>
+      <h1>statistics</h1>
       <table>
       <StatisticLine text="good" value={values[0]} />
       <StatisticLine text="neutral" value={values[1]} />
@@ -30,7 +30,11 @@ const Statistics = ({values}) => {
   )
   }
   else{
-    return <div><p>No feedback given</p></div>
+    
+    return <div>
+      <h1>statistics</h1>
+      <p>No feedback given</p>
+      </div>
   }
 }
 
