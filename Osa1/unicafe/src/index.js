@@ -19,12 +19,14 @@ const Statistics = ({values}) => {
     <div>
       <h1>statistics</h1>
       <table>
-      <StatisticLine text="good" value={values[0]} />
-      <StatisticLine text="neutral" value={values[1]} />
-      <StatisticLine text="bad" value={values[2]} />
-      <StatisticLine text="Total" value={total} />
-      <StatisticLine text="Average" value={score / total} />
-      <StatisticLine text="Positive" value={values[0] / total} />
+        <tbody>
+          <StatisticLine text="good" value={values[0]} />
+          <StatisticLine text="neutral" value={values[1]} />
+          <StatisticLine text="bad" value={values[2]} />
+          <StatisticLine text="Total" value={total} />
+          <StatisticLine text="Average" value={score / total} />
+          <StatisticLine text="Positive" value={values[0] / total} />
+        </tbody>
       </table>  
     </div>
   )
